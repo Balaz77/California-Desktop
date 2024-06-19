@@ -42,7 +42,7 @@ namespace california.e.UI
             // cadFunLkn
             // 
             this.cadFunLkn.AutoSize = true;
-            this.cadFunLkn.Location = new System.Drawing.Point(417, 401);
+            this.cadFunLkn.Location = new System.Drawing.Point(435, 401);
             this.cadFunLkn.Name = "cadFunLkn";
             this.cadFunLkn.Size = new System.Drawing.Size(66, 13);
             this.cadFunLkn.TabIndex = 15;

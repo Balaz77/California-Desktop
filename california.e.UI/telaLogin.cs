@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using california.e.BO;
 
 namespace california.e.UI
 {
@@ -30,10 +31,25 @@ namespace california.e.UI
             }
             else
             {
-                MessageBox.Show("Acesso Liberado");
-                telaMenu telaMenu = new telaMenu();
-                telaMenu.Show();
-                this.Hide();
+                //MessageBox.Show("Acesso Liberado");
+                //telaMenu telaMenu = new telaMenu();
+                //telaMenu.Show();
+                //this.Hide();
+
+                DateTime horaentrada = DateTime.Now;
+                DateTime horasaida = Convert.ToDateTime("18/06/2024 23:34:00");
+
+                funcionario classLogin = new funcionario();
+
+                if (classLogin.validarFunc(logUserTxt.Text, logPwdTxt.Text)==true)
+                {
+                    telaMenu telaInicio = new telaMenu();
+                    telaInicio.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario ou senha errados!");
+                }
             }
         }
     }

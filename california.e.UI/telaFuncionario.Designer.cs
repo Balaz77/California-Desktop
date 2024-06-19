@@ -59,12 +59,13 @@ namespace california.e.UI
             this.label2 = new System.Windows.Forms.Label();
             this.pqsFuncTxt = new System.Windows.Forms.TextBox();
             this.pqsFuncBtn = new System.Windows.Forms.Button();
+            this.altFuncBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // cadFun
             // 
-            this.cadFun.Location = new System.Drawing.Point(384, 352);
+            this.cadFun.Location = new System.Drawing.Point(352, 330);
             this.cadFun.Name = "cadFun";
             this.cadFun.Size = new System.Drawing.Size(186, 24);
             this.cadFun.TabIndex = 44;
@@ -169,21 +170,21 @@ namespace california.e.UI
             // 
             this.nomeFuncTxt.Location = new System.Drawing.Point(38, 210);
             this.nomeFuncTxt.Name = "nomeFuncTxt";
-            this.nomeFuncTxt.Size = new System.Drawing.Size(285, 20);
+            this.nomeFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.nomeFuncTxt.TabIndex = 32;
             // 
             // endFuncTxt
             // 
             this.endFuncTxt.Location = new System.Drawing.Point(38, 374);
             this.endFuncTxt.Name = "endFuncTxt";
-            this.endFuncTxt.Size = new System.Drawing.Size(253, 20);
+            this.endFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.endFuncTxt.TabIndex = 31;
             // 
             // telFuncTxt
             // 
             this.telFuncTxt.Location = new System.Drawing.Point(38, 330);
             this.telFuncTxt.Name = "telFuncTxt";
-            this.telFuncTxt.Size = new System.Drawing.Size(253, 20);
+            this.telFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.telFuncTxt.TabIndex = 30;
             // 
             // cpfFuncTxt
@@ -204,7 +205,7 @@ namespace california.e.UI
             // 
             this.lblSubtFunc.AutoSize = true;
             this.lblSubtFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtFunc.Location = new System.Drawing.Point(379, 69);
+            this.lblSubtFunc.Location = new System.Drawing.Point(347, 47);
             this.lblSubtFunc.Name = "lblSubtFunc";
             this.lblSubtFunc.Size = new System.Drawing.Size(238, 25);
             this.lblSubtFunc.TabIndex = 27;
@@ -223,7 +224,7 @@ namespace california.e.UI
             // lnkVoltarFun
             // 
             this.lnkVoltarFun.AutoSize = true;
-            this.lnkVoltarFun.Location = new System.Drawing.Point(677, 415);
+            this.lnkVoltarFun.Location = new System.Drawing.Point(678, 405);
             this.lnkVoltarFun.Name = "lnkVoltarFun";
             this.lnkVoltarFun.Size = new System.Drawing.Size(78, 13);
             this.lnkVoltarFun.TabIndex = 64;
@@ -258,7 +259,7 @@ namespace california.e.UI
             // dgvFunc
             // 
             this.dgvFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFunc.Location = new System.Drawing.Point(384, 129);
+            this.dgvFunc.Location = new System.Drawing.Point(352, 107);
             this.dgvFunc.Name = "dgvFunc";
             this.dgvFunc.Size = new System.Drawing.Size(404, 214);
             this.dgvFunc.TabIndex = 68;
@@ -269,14 +270,14 @@ namespace california.e.UI
             this.infoFunclbl.AutoSize = true;
             this.infoFunclbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoFunclbl.ForeColor = System.Drawing.Color.ForestGreen;
-            this.infoFunclbl.Location = new System.Drawing.Point(623, 74);
+            this.infoFunclbl.Location = new System.Drawing.Point(591, 52);
             this.infoFunclbl.Name = "infoFunclbl";
             this.infoFunclbl.Size = new System.Drawing.Size(0, 18);
             this.infoFunclbl.TabIndex = 69;
             // 
             // canBtnFunc
             // 
-            this.canBtnFunc.Location = new System.Drawing.Point(384, 382);
+            this.canBtnFunc.Location = new System.Drawing.Point(352, 360);
             this.canBtnFunc.Name = "canBtnFunc";
             this.canBtnFunc.Size = new System.Drawing.Size(106, 24);
             this.canBtnFunc.TabIndex = 70;
@@ -286,7 +287,7 @@ namespace california.e.UI
             // 
             // delBtnFunc
             // 
-            this.delBtnFunc.Location = new System.Drawing.Point(675, 352);
+            this.delBtnFunc.Location = new System.Drawing.Point(665, 330);
             this.delBtnFunc.Name = "delBtnFunc";
             this.delBtnFunc.Size = new System.Drawing.Size(91, 24);
             this.delBtnFunc.TabIndex = 71;
@@ -298,7 +299,7 @@ namespace california.e.UI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(381, 106);
+            this.label2.Location = new System.Drawing.Point(349, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 72;
@@ -306,14 +307,14 @@ namespace california.e.UI
             // 
             // pqsFuncTxt
             // 
-            this.pqsFuncTxt.Location = new System.Drawing.Point(439, 106);
+            this.pqsFuncTxt.Location = new System.Drawing.Point(407, 84);
             this.pqsFuncTxt.Name = "pqsFuncTxt";
-            this.pqsFuncTxt.Size = new System.Drawing.Size(221, 20);
+            this.pqsFuncTxt.Size = new System.Drawing.Size(237, 20);
             this.pqsFuncTxt.TabIndex = 73;
             // 
             // pqsFuncBtn
             // 
-            this.pqsFuncBtn.Location = new System.Drawing.Point(666, 103);
+            this.pqsFuncBtn.Location = new System.Drawing.Point(650, 83);
             this.pqsFuncBtn.Name = "pqsFuncBtn";
             this.pqsFuncBtn.Size = new System.Drawing.Size(106, 24);
             this.pqsFuncBtn.TabIndex = 74;
@@ -321,11 +322,22 @@ namespace california.e.UI
             this.pqsFuncBtn.UseVisualStyleBackColor = true;
             this.pqsFuncBtn.Click += new System.EventHandler(this.pqsFuncBtn_Click);
             // 
+            // altFuncBtn
+            // 
+            this.altFuncBtn.Location = new System.Drawing.Point(568, 330);
+            this.altFuncBtn.Name = "altFuncBtn";
+            this.altFuncBtn.Size = new System.Drawing.Size(91, 24);
+            this.altFuncBtn.TabIndex = 75;
+            this.altFuncBtn.Text = "Alterar";
+            this.altFuncBtn.UseVisualStyleBackColor = true;
+            this.altFuncBtn.Click += new System.EventHandler(this.altFuncBtn_Click);
+            // 
             // telaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.altFuncBtn);
             this.Controls.Add(this.pqsFuncBtn);
             this.Controls.Add(this.pqsFuncTxt);
             this.Controls.Add(this.label2);
@@ -397,5 +409,6 @@ namespace california.e.UI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox pqsFuncTxt;
         private System.Windows.Forms.Button pqsFuncBtn;
+        private System.Windows.Forms.Button altFuncBtn;
     }
 }

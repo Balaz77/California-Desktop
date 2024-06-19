@@ -51,9 +51,9 @@ namespace california.e.UI
 
             funcionarios.Add(classFuncionario);
          
-            //se não exixtir cadastra
-        if (cpfFuncTxt.Enabled = false)
-            {
+          
+     
+            
                 //cadastra o funcionario se o cpf for true (existir)
                 classFuncionario.cadastrarFunc(classFuncionario);
                 MessageBox.Show("Funcionario inserido com sucesso");
@@ -67,21 +67,19 @@ namespace california.e.UI
                 telFuncTxt.Text = "";
                 endFuncTxt.Text = "";
                 dtNacFuncTxt.Text = "";
-
-            }
+            
         
-            //se existir permite cadastro
-            else
-            {
+      
+          
                 //altera o funcionario se o cpf for false (n existir)
-                classFuncionario.alterarFunc(classFuncionario);
-                MessageBox.Show("Dados alterados com sucesso");
-            }
+             //   classFuncionario.alterarFunc(classFuncionario);
+              //  MessageBox.Show("Dados alterados com sucesso");
+            
 
             dgvFunc.DataSource = classFuncionario.buscarFunc();
            
 
-            cpfFuncTxt.Enabled = false;
+          //  cpfFuncTxt.Enabled = true;
             infoFunclbl.Text = "Inserir";
             delBtnFunc.Visible = true;
 
@@ -120,10 +118,10 @@ namespace california.e.UI
 
             //mostra os botoes que estavam escondidos e habilita troca
             infoFunclbl.Text = "Alterar";
-            cpfFuncTxt.Enabled = true;
+            cpfFuncTxt.Enabled = false;
             delBtnFunc.Visible = true;
-            
 
+          //  classFuncionario.alterarFunc(classFuncionario);
 
         }
 
@@ -169,12 +167,22 @@ namespace california.e.UI
                 //instanciando
                 funcionario classFuncionario = new funcionario();
                 //chamando o metodo para excluir 
+                //digitar cpf para poder excluir
                 classFuncionario.deletarFunc(cpfFuncTxt.Text);
+                
                 MessageBox.Show("Funcionario foi excluido");
+
+                if(cpfFuncTxt.Text == "")
+                {
+                    MessageBox.Show("Por favor digite o CPF no campo.");
+                }
+
 
                
                 dgvFunc.DataSource = classFuncionario.buscarFunc();
             }
+
+
         
         }
 
@@ -184,6 +192,29 @@ namespace california.e.UI
         {
            funcionario classFuncionario = new funcionario(); 
             dgvFunc.DataSource = classFuncionario.procuraFunc(pqsFuncTxt.Text);
+        }
+
+        private void altFuncBtn_Click(object sender, EventArgs e)
+        {
+            //  classFuncionario.cargoFunc = cargoFuncTxt.Text;
+            //   classFuncionario.usuarioFunc = usrFuncTxt.Text;
+            //   classFuncionario.senhaFunc = pwdFuncTxt.Text;
+            //   classFuncionario.nomeFunc = nomeFuncTxt.Text;
+            //   classFuncionario.cpfFunc = cpfFuncTxt.Text;
+            //   classFuncionario.telefoneFunc = telFuncTxt.Text;
+            //   classFuncionario.enderecoFunc = endFuncTxt.Text;
+            //   classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
+
+            //   cargoFuncTxt.Text = "";
+            //   usrFuncTxt.Text = "";
+            //   pwdFuncTxt.Text = "";
+            //   nomeFuncTxt.Text = "";
+            //    cpfFuncTxt.Text = "";
+            //    telFuncTxt.Text = "";
+            //    endFuncTxt.Text = "";
+            //    dtNacFuncTxt.Text = "";
+
+            classFuncionario.alterarFunc(classFuncionario);
         }
     }
 }

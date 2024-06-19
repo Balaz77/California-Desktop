@@ -111,7 +111,7 @@ namespace california.e.UI
             // 
             this.lblSubt.AutoSize = true;
             this.lblSubt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubt.Location = new System.Drawing.Point(21, 67);
+            this.lblSubt.Location = new System.Drawing.Point(12, 48);
             this.lblSubt.Name = "lblSubt";
             this.lblSubt.Size = new System.Drawing.Size(147, 24);
             this.lblSubt.TabIndex = 61;
@@ -121,7 +121,7 @@ namespace california.e.UI
             // 
             this.lblTitl.AutoSize = true;
             this.lblTitl.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitl.Location = new System.Drawing.Point(8, 19);
+            this.lblTitl.Location = new System.Drawing.Point(8, 0);
             this.lblTitl.Name = "lblTitl";
             this.lblTitl.Size = new System.Drawing.Size(196, 48);
             this.lblTitl.TabIndex = 60;
