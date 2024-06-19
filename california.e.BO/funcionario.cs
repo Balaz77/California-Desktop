@@ -13,6 +13,7 @@ namespace california.e.BO
 {
     public class funcionario
     {
+        #region atributos
         //atributos do banco california
         public string cargoFunc { get; set; }
         public string usuarioFunc { get; set; }
@@ -22,14 +23,16 @@ namespace california.e.BO
         public DateTime  dtNascimento { get; set; }
         public string telefoneFunc { get; set; }
         public string enderecoFunc { get; set; }
-       
+        #endregion
+
         public string confSenha{ get; }
 
+        #region cadastrar
         //este serve para cadastrar o funcionario dentro do banco
         public void cadastrarFunc(funcionario funcionario)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
             
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -44,11 +47,13 @@ namespace california.e.BO
             
             
         }
+        #endregion
 
+        #region buscar
         //configura o dgv
         public DataTable buscarFunc()
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -68,11 +73,14 @@ namespace california.e.BO
 
            return dt;
         }
+        #endregion
 
+        //arrumar 
+        #region alterar
         //metodo para alterar
         public void alterarFunc(funcionario funcionario)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -85,11 +93,13 @@ namespace california.e.BO
             //executa o comando (query serve para executar)
             comando.ExecuteNonQuery();
         }
+        #endregion 
 
+        #region deletar
         //string parametro deveria ser algo como (*classe*->funcionario *string*->funcionario)
         public void deletarFunc(string cpfFunc)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
@@ -99,18 +109,20 @@ namespace california.e.BO
             MySqlCommand comando = new MySqlCommand(sqlcommand, minhaConexao);
             comando.ExecuteNonQuery();
         }
+        #endregion
 
+        #region procurar
         public DataTable procuraFunc(string cargoFunc)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
 
             //comando que busca por algo especifico no banco
-            string sqlcommand = "SELECT cargoFunc cargoFunc,usuarioFunc,senhaFunc,nomeFunc,cpfFunc,dtNascimento,telefoneFunc,enderecoFun FROM funcionario where cargoFunc like '%" + cargoFunc + "%';";
+            string sqlcommand = "SELECT cargoFunc cargoFunc,usuarioFunc,senhaFunc,nomeFunc,cpfFunc,dtNascimento,telefoneFunc,enderecoFunc FROM funcionario where cargoFunc like '%" + cargoFunc + "%';";
             MySqlCommand comando = new MySqlCommand(sqlcommand, minhaConexao);
 
             //executa o comando (query serve para executar)
@@ -125,5 +137,38 @@ namespace california.e.BO
 
 
         }
+        #endregion
+
+        #region validar 
+        public bool validarFunc(string usuarioFunc, string senhaFunc )
+        {
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+
+            //conexao
+            MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
+            minhaConexao.Open();
+
+            //este comando serve para buscar no banco os funcionarios ja cadastrados
+            string sqlcommand = " SELECT * FROM funcionario where usuarioFunc='" + usuarioFunc +"'and senhaFunc='" + senhaFunc + "' ";
+            MySqlCommand comando = new MySqlCommand(sqlcommand, minhaConexao);
+
+            //executa o comando (query serve para executar)
+            comando.ExecuteNonQuery();
+
+            //isso aqui serve para configurar o datagrid pra mostrara os dados.
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(sqlcommand, minhaConexao);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+
+            if(dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
     }
 }
