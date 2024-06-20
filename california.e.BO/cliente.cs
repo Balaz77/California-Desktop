@@ -20,7 +20,7 @@ namespace california.e.BO
         public void cadastrarCliente(cliente cliente)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
