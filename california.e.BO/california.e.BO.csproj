@@ -97,6 +97,7 @@
     <Compile Include="cliente.cs" />
     <Compile Include="produtos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vendas.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
