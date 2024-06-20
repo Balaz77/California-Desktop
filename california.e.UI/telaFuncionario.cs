@@ -159,9 +159,15 @@ namespace california.e.UI
         //botão para deletar
         private void delBtnFunc_Click(object sender, EventArgs e)
         {
+
+            if (cpfFuncTxt.Text == "")
+            {
+                MessageBox.Show("Por favor digite o CPF no campo.");
+            }
+
             //se a resposta for sim ele vai excluir o funcionario da tabela
             DialogResult result = MessageBox.Show("A exclusão do funcionario será realizada, tem certeza disso?", "Funcionarios", MessageBoxButtons.YesNo);
-
+           
             if (result == DialogResult.Yes) {
 
                 //instanciando
@@ -172,13 +178,6 @@ namespace california.e.UI
                 
                 MessageBox.Show("Funcionario foi excluido");
 
-                if(cpfFuncTxt.Text == "")
-                {
-                    MessageBox.Show("Por favor digite o CPF no campo.");
-                }
-
-
-               
                 dgvFunc.DataSource = classFuncionario.buscarFunc();
             }
 
@@ -196,23 +195,25 @@ namespace california.e.UI
 
         private void altFuncBtn_Click(object sender, EventArgs e)
         {
-            //  classFuncionario.cargoFunc = cargoFuncTxt.Text;
-            //   classFuncionario.usuarioFunc = usrFuncTxt.Text;
-            //   classFuncionario.senhaFunc = pwdFuncTxt.Text;
-            //   classFuncionario.nomeFunc = nomeFuncTxt.Text;
-            //   classFuncionario.cpfFunc = cpfFuncTxt.Text;
-            //   classFuncionario.telefoneFunc = telFuncTxt.Text;
-            //   classFuncionario.enderecoFunc = endFuncTxt.Text;
-            //   classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
+            funcionario classfuncionario = new funcionario();
 
-            //   cargoFuncTxt.Text = "";
-            //   usrFuncTxt.Text = "";
-            //   pwdFuncTxt.Text = "";
-            //   nomeFuncTxt.Text = "";
-            //    cpfFuncTxt.Text = "";
-            //    telFuncTxt.Text = "";
-            //    endFuncTxt.Text = "";
-            //    dtNacFuncTxt.Text = "";
+               classFuncionario.cargoFunc = cargoFuncTxt.Text;
+               classFuncionario.usuarioFunc = usrFuncTxt.Text;
+               classFuncionario.senhaFunc = pwdFuncTxt.Text;
+               classFuncionario.nomeFunc = nomeFuncTxt.Text;
+               classFuncionario.cpfFunc = cpfFuncTxt.Text;
+               classFuncionario.telefoneFunc = telFuncTxt.Text;
+               classFuncionario.enderecoFunc = endFuncTxt.Text;
+               classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
+
+               cargoFuncTxt.Text = "";
+               usrFuncTxt.Text = "";
+               pwdFuncTxt.Text = "";
+               nomeFuncTxt.Text = "";
+               cpfFuncTxt.Text = "";
+               telFuncTxt.Text = "";
+               endFuncTxt.Text = "";
+               dtNacFuncTxt.Text = "";
 
             classFuncionario.alterarFunc(classFuncionario);
         }
