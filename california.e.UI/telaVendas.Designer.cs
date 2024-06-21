@@ -49,6 +49,8 @@ namespace california.e.UI
             this.canBtnProd = new System.Windows.Forms.Button();
             this.infoFunclbl = new System.Windows.Forms.Label();
             this.dgvProd = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@ namespace california.e.UI
             // dtVendaLbl
             // 
             this.dtVendaLbl.AutoSize = true;
-            this.dtVendaLbl.Location = new System.Drawing.Point(58, 304);
+            this.dtVendaLbl.Location = new System.Drawing.Point(57, 340);
             this.dtVendaLbl.Name = "dtVendaLbl";
             this.dtVendaLbl.Size = new System.Drawing.Size(30, 13);
             this.dtVendaLbl.TabIndex = 38;
@@ -74,7 +76,7 @@ namespace california.e.UI
             // nomeProdLbl
             // 
             this.nomeProdLbl.AutoSize = true;
-            this.nomeProdLbl.Location = new System.Drawing.Point(58, 257);
+            this.nomeProdLbl.Location = new System.Drawing.Point(57, 293);
             this.nomeProdLbl.Name = "nomeProdLbl";
             this.nomeProdLbl.Size = new System.Drawing.Size(74, 13);
             this.nomeProdLbl.TabIndex = 36;
@@ -83,7 +85,7 @@ namespace california.e.UI
             // saleVendaLbl
             // 
             this.saleVendaLbl.AutoSize = true;
-            this.saleVendaLbl.Location = new System.Drawing.Point(58, 209);
+            this.saleVendaLbl.Location = new System.Drawing.Point(57, 245);
             this.saleVendaLbl.Name = "saleVendaLbl";
             this.saleVendaLbl.Size = new System.Drawing.Size(134, 13);
             this.saleVendaLbl.TabIndex = 35;
@@ -92,7 +94,7 @@ namespace california.e.UI
             // qntVendaLbl
             // 
             this.qntVendaLbl.AutoSize = true;
-            this.qntVendaLbl.Location = new System.Drawing.Point(58, 163);
+            this.qntVendaLbl.Location = new System.Drawing.Point(57, 199);
             this.qntVendaLbl.Name = "qntVendaLbl";
             this.qntVendaLbl.Size = new System.Drawing.Size(60, 13);
             this.qntVendaLbl.TabIndex = 34;
@@ -100,35 +102,35 @@ namespace california.e.UI
             // 
             // nomeProdTxt
             // 
-            this.nomeProdTxt.Location = new System.Drawing.Point(61, 273);
+            this.nomeProdTxt.Location = new System.Drawing.Point(60, 309);
             this.nomeProdTxt.Name = "nomeProdTxt";
             this.nomeProdTxt.Size = new System.Drawing.Size(130, 20);
             this.nomeProdTxt.TabIndex = 32;
             // 
             // dtVendaTxt
             // 
-            this.dtVendaTxt.Location = new System.Drawing.Point(61, 320);
+            this.dtVendaTxt.Location = new System.Drawing.Point(60, 356);
             this.dtVendaTxt.Name = "dtVendaTxt";
             this.dtVendaTxt.Size = new System.Drawing.Size(91, 20);
             this.dtVendaTxt.TabIndex = 31;
             // 
             // saleVendaTxt
             // 
-            this.saleVendaTxt.Location = new System.Drawing.Point(61, 225);
+            this.saleVendaTxt.Location = new System.Drawing.Point(60, 261);
             this.saleVendaTxt.Name = "saleVendaTxt";
             this.saleVendaTxt.Size = new System.Drawing.Size(131, 20);
             this.saleVendaTxt.TabIndex = 30;
             // 
             // qntVendaTxt
             // 
-            this.qntVendaTxt.Location = new System.Drawing.Point(61, 177);
+            this.qntVendaTxt.Location = new System.Drawing.Point(60, 213);
             this.qntVendaTxt.Name = "qntVendaTxt";
             this.qntVendaTxt.Size = new System.Drawing.Size(81, 20);
             this.qntVendaTxt.TabIndex = 29;
             // 
             // valVendaTxt
             // 
-            this.valVendaTxt.Location = new System.Drawing.Point(61, 131);
+            this.valVendaTxt.Location = new System.Drawing.Point(60, 167);
             this.valVendaTxt.Name = "valVendaTxt";
             this.valVendaTxt.Size = new System.Drawing.Size(81, 20);
             this.valVendaTxt.TabIndex = 28;
@@ -136,7 +138,7 @@ namespace california.e.UI
             // valVendaLbl
             // 
             this.valVendaLbl.AutoSize = true;
-            this.valVendaLbl.Location = new System.Drawing.Point(58, 115);
+            this.valVendaLbl.Location = new System.Drawing.Point(57, 151);
             this.valVendaLbl.Name = "valVendaLbl";
             this.valVendaLbl.Size = new System.Drawing.Size(84, 13);
             this.valVendaLbl.TabIndex = 27;
@@ -229,11 +231,29 @@ namespace california.e.UI
             this.dgvProd.TabIndex = 78;
             this.dgvProd.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProd_CellContentDoubleClick);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(60, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(81, 20);
+            this.textBox1.TabIndex = 86;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(57, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Código da compra ";
+            // 
             // telaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pqsProdBtn);
             this.Controls.Add(this.pqsProdTxt);
             this.Controls.Add(this.label1);
@@ -285,5 +305,7 @@ namespace california.e.UI
         private System.Windows.Forms.Button canBtnProd;
         private System.Windows.Forms.Label infoFunclbl;
         private System.Windows.Forms.DataGridView dgvProd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

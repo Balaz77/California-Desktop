@@ -55,7 +55,7 @@ namespace california.e.UI
             this.dgvFunc = new System.Windows.Forms.DataGridView();
             this.infoFunclbl = new System.Windows.Forms.Label();
             this.canBtnFunc = new System.Windows.Forms.Button();
-            this.delBtnFunc = new System.Windows.Forms.Button();
+            this.delBtnProd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pqsFuncTxt = new System.Windows.Forms.TextBox();
             this.pqsFuncBtn = new System.Windows.Forms.Button();
@@ -263,7 +263,6 @@ namespace california.e.UI
             this.dgvFunc.Name = "dgvFunc";
             this.dgvFunc.Size = new System.Drawing.Size(404, 214);
             this.dgvFunc.TabIndex = 68;
-            this.dgvFunc.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunc_CellContentDoubleClick);
             // 
             // infoFunclbl
             // 
@@ -285,15 +284,15 @@ namespace california.e.UI
             this.canBtnFunc.UseVisualStyleBackColor = true;
             this.canBtnFunc.Click += new System.EventHandler(this.canBtnFunc_Click);
             // 
-            // delBtnFunc
+            // delBtnProd
             // 
-            this.delBtnFunc.Location = new System.Drawing.Point(665, 330);
-            this.delBtnFunc.Name = "delBtnFunc";
-            this.delBtnFunc.Size = new System.Drawing.Size(91, 24);
-            this.delBtnFunc.TabIndex = 71;
-            this.delBtnFunc.Text = "Deletar";
-            this.delBtnFunc.UseVisualStyleBackColor = true;
-            this.delBtnFunc.Click += new System.EventHandler(this.delBtnFunc_Click);
+            this.delBtnProd.Location = new System.Drawing.Point(665, 330);
+            this.delBtnProd.Name = "delBtnProd";
+            this.delBtnProd.Size = new System.Drawing.Size(91, 24);
+            this.delBtnProd.TabIndex = 71;
+            this.delBtnProd.Text = "Deletar";
+            this.delBtnProd.UseVisualStyleBackColor = true;
+            this.delBtnProd.Click += new System.EventHandler(this.delBtnFunc_Click);
             // 
             // label2
             // 
@@ -341,7 +340,7 @@ namespace california.e.UI
             this.Controls.Add(this.pqsFuncBtn);
             this.Controls.Add(this.pqsFuncTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.delBtnFunc);
+            this.Controls.Add(this.delBtnProd);
             this.Controls.Add(this.canBtnFunc);
             this.Controls.Add(this.infoFunclbl);
             this.Controls.Add(this.dgvFunc);
@@ -405,7 +404,7 @@ namespace california.e.UI
         private System.Windows.Forms.DataGridView dgvFunc;
         private System.Windows.Forms.Label infoFunclbl;
         private System.Windows.Forms.Button canBtnFunc;
-        private System.Windows.Forms.Button delBtnFunc;
+        private System.Windows.Forms.Button delBtnProd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox pqsFuncTxt;
         private System.Windows.Forms.Button pqsFuncBtn;

@@ -81,7 +81,7 @@ namespace california.e.UI
 
           //  cpfFuncTxt.Enabled = true;
             infoFunclbl.Text = "Inserir";
-            delBtnFunc.Visible = true;
+            delBtnProd.Visible = true;
 
 
 
@@ -119,7 +119,7 @@ namespace california.e.UI
             //mostra os botoes que estavam escondidos e habilita troca
             infoFunclbl.Text = "Alterar";
             cpfFuncTxt.Enabled = false;
-            delBtnFunc.Visible = true;
+            delBtnProd.Visible = true;
 
           //  classFuncionario.alterarFunc(classFuncionario);
 
@@ -149,7 +149,7 @@ namespace california.e.UI
                 cpfFuncTxt.Enabled=true;
 
                 //botão invisivel
-                delBtnFunc.Visible=false;
+              
 
 
             }
@@ -163,6 +163,7 @@ namespace california.e.UI
             if (cpfFuncTxt.Text == "")
             {
                 MessageBox.Show("Por favor digite o CPF no campo.");
+
             }
 
             //se a resposta for sim ele vai excluir o funcionario da tabela
@@ -217,5 +218,7 @@ namespace california.e.UI
 
             classFuncionario.alterarFunc(classFuncionario);
         }
+
+        
     }
 }

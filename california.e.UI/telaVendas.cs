@@ -96,7 +96,7 @@ namespace california.e.UI
         private void pqsProdBtn_Click(object sender, EventArgs e)
         {
             vendas vendas = new vendas();
-            dgvProd.DataSource = vendas.procuraProd(DateTime.Parse(pqsProdTxt.Text));
+            dgvProd.DataSource = vendas.procuraProd(int.Parse(pqsProdTxt.Text));
         }
     }
 
