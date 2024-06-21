@@ -13,10 +13,12 @@ namespace california.e.BO
 {
   public class vendas
     {
+
         public decimal precoCompra { get; set; }
         public int quantidadeCompra { get; set; }
         public decimal descontoCompra { get; set; }
         public DateTime dtVenda { get; set; }
+        public int codCompra { get; set; }
 
         #region cadastrar
         //este serve para cadastrar o funcionario dentro do banco
@@ -66,7 +68,7 @@ namespace california.e.BO
         #endregion
 
         #region procurar
-        public DataTable procuraProd(DateTime dtVenda)
+        public DataTable procuraProd(int codCompra)
         {
             //conectando com o banco
             string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
@@ -76,7 +78,7 @@ namespace california.e.BO
             minhaConexao.Open();
 
             //comando que busca por algo especifico no banco
-            string sqlcommand = "SELECT precoCompra,quantidadeCompra,descontoCompra,dtVenda FROM compras where dtVenda like '%" + dtVenda + "%';";
+            string sqlcommand = "SELECT precoCompra,quantidadeCompra,descontoCompra,dtVenda FROM compras where codCompra like '%" + codCompra + "%';";
             MySqlCommand comando = new MySqlCommand(sqlcommand, minhaConexao);
 
             //executa o comando (query serve para executar)
