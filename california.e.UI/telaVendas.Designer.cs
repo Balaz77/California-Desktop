@@ -59,7 +59,7 @@ namespace california.e.UI
             this.regProdBtn.Location = new System.Drawing.Point(312, 323);
             this.regProdBtn.Name = "regProdBtn";
             this.regProdBtn.Size = new System.Drawing.Size(193, 27);
-            this.regProdBtn.TabIndex = 39;
+            this.regProdBtn.TabIndex = 7;
             this.regProdBtn.Text = "Salvar";
             this.regProdBtn.UseVisualStyleBackColor = true;
             this.regProdBtn.Click += new System.EventHandler(this.regProdBtn_Click);
@@ -105,35 +105,35 @@ namespace california.e.UI
             this.nomeProdTxt.Location = new System.Drawing.Point(60, 309);
             this.nomeProdTxt.Name = "nomeProdTxt";
             this.nomeProdTxt.Size = new System.Drawing.Size(130, 20);
-            this.nomeProdTxt.TabIndex = 32;
+            this.nomeProdTxt.TabIndex = 5;
             // 
             // dtVendaTxt
             // 
             this.dtVendaTxt.Location = new System.Drawing.Point(60, 356);
             this.dtVendaTxt.Name = "dtVendaTxt";
             this.dtVendaTxt.Size = new System.Drawing.Size(91, 20);
-            this.dtVendaTxt.TabIndex = 31;
+            this.dtVendaTxt.TabIndex = 6;
             // 
             // saleVendaTxt
             // 
             this.saleVendaTxt.Location = new System.Drawing.Point(60, 261);
             this.saleVendaTxt.Name = "saleVendaTxt";
             this.saleVendaTxt.Size = new System.Drawing.Size(131, 20);
-            this.saleVendaTxt.TabIndex = 30;
+            this.saleVendaTxt.TabIndex = 4;
             // 
             // qntVendaTxt
             // 
             this.qntVendaTxt.Location = new System.Drawing.Point(60, 213);
             this.qntVendaTxt.Name = "qntVendaTxt";
             this.qntVendaTxt.Size = new System.Drawing.Size(81, 20);
-            this.qntVendaTxt.TabIndex = 29;
+            this.qntVendaTxt.TabIndex = 3;
             // 
             // valVendaTxt
             // 
             this.valVendaTxt.Location = new System.Drawing.Point(60, 167);
             this.valVendaTxt.Name = "valVendaTxt";
             this.valVendaTxt.Size = new System.Drawing.Size(81, 20);
-            this.valVendaTxt.TabIndex = 28;
+            this.valVendaTxt.TabIndex = 2;
             // 
             // valVendaLbl
             // 
@@ -180,7 +180,7 @@ namespace california.e.UI
             this.pqsProdBtn.Location = new System.Drawing.Point(549, 77);
             this.pqsProdBtn.Name = "pqsProdBtn";
             this.pqsProdBtn.Size = new System.Drawing.Size(106, 24);
-            this.pqsProdBtn.TabIndex = 84;
+            this.pqsProdBtn.TabIndex = 10;
             this.pqsProdBtn.Text = "Pesquisar";
             this.pqsProdBtn.UseVisualStyleBackColor = true;
             this.pqsProdBtn.Click += new System.EventHandler(this.pqsProdBtn_Click);
@@ -190,7 +190,7 @@ namespace california.e.UI
             this.pqsProdTxt.Location = new System.Drawing.Point(427, 80);
             this.pqsProdTxt.Name = "pqsProdTxt";
             this.pqsProdTxt.Size = new System.Drawing.Size(116, 20);
-            this.pqsProdTxt.TabIndex = 83;
+            this.pqsProdTxt.TabIndex = 9;
             // 
             // label1
             // 
@@ -228,7 +228,7 @@ namespace california.e.UI
             this.dgvProd.Location = new System.Drawing.Point(312, 103);
             this.dgvProd.Name = "dgvProd";
             this.dgvProd.Size = new System.Drawing.Size(429, 214);
-            this.dgvProd.TabIndex = 78;
+            this.dgvProd.TabIndex = 8;
             this.dgvProd.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProd_CellContentDoubleClick);
             // 
             // textBox1
@@ -236,7 +236,7 @@ namespace california.e.UI
             this.textBox1.Location = new System.Drawing.Point(60, 118);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(81, 20);
-            this.textBox1.TabIndex = 86;
+            this.textBox1.TabIndex = 1;
             // 
             // label3
             // 

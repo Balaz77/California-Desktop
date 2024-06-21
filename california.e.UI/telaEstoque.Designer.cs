@@ -44,7 +44,6 @@ namespace california.e.UI
             this.corProdTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.altProdBtn = new System.Windows.Forms.Button();
             this.pqsProdBtn = new System.Windows.Forms.Button();
             this.pqsProdTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -120,28 +119,28 @@ namespace california.e.UI
             this.ValProdTxt.Location = new System.Drawing.Point(51, 374);
             this.ValProdTxt.Name = "ValProdTxt";
             this.ValProdTxt.Size = new System.Drawing.Size(151, 20);
-            this.ValProdTxt.TabIndex = 25;
+            this.ValProdTxt.TabIndex = 7;
             // 
             // ctgProdTxt
             // 
             this.ctgProdTxt.Location = new System.Drawing.Point(51, 296);
             this.ctgProdTxt.Name = "ctgProdTxt";
             this.ctgProdTxt.Size = new System.Drawing.Size(151, 20);
-            this.ctgProdTxt.TabIndex = 24;
+            this.ctgProdTxt.TabIndex = 5;
             // 
             // QuantProdTxt
             // 
             this.QuantProdTxt.Location = new System.Drawing.Point(48, 252);
             this.QuantProdTxt.Name = "QuantProdTxt";
             this.QuantProdTxt.Size = new System.Drawing.Size(154, 20);
-            this.QuantProdTxt.TabIndex = 21;
+            this.QuantProdTxt.TabIndex = 4;
             // 
             // NomeProdTxt
             // 
             this.NomeProdTxt.Location = new System.Drawing.Point(51, 335);
             this.NomeProdTxt.Name = "NomeProdTxt";
             this.NomeProdTxt.Size = new System.Drawing.Size(154, 20);
-            this.NomeProdTxt.TabIndex = 20;
+            this.NomeProdTxt.TabIndex = 6;
             // 
             // voltarLkn
             // 
@@ -159,14 +158,15 @@ namespace california.e.UI
             this.tamanhoProdTxt.Location = new System.Drawing.Point(51, 169);
             this.tamanhoProdTxt.Name = "tamanhoProdTxt";
             this.tamanhoProdTxt.Size = new System.Drawing.Size(151, 20);
-            this.tamanhoProdTxt.TabIndex = 41;
+            this.tamanhoProdTxt.TabIndex = 2;
             // 
             // corProdTxt
             // 
             this.corProdTxt.Location = new System.Drawing.Point(51, 206);
             this.corProdTxt.Name = "corProdTxt";
             this.corProdTxt.Size = new System.Drawing.Size(151, 20);
-            this.corProdTxt.TabIndex = 42;
+            this.corProdTxt.TabIndex = 3;
+            this.corProdTxt.TextChanged += new System.EventHandler(this.corProdTxt_TextChanged);
             // 
             // label13
             // 
@@ -185,15 +185,6 @@ namespace california.e.UI
             this.label11.Size = new System.Drawing.Size(23, 13);
             this.label11.TabIndex = 45;
             this.label11.Text = "Cor";
-            // 
-            // altProdBtn
-            // 
-            this.altProdBtn.Location = new System.Drawing.Point(569, 344);
-            this.altProdBtn.Name = "altProdBtn";
-            this.altProdBtn.Size = new System.Drawing.Size(91, 24);
-            this.altProdBtn.TabIndex = 85;
-            this.altProdBtn.Text = "Alterar";
-            this.altProdBtn.UseVisualStyleBackColor = true;
             // 
             // pqsProdBtn
             // 
@@ -266,7 +257,7 @@ namespace california.e.UI
             this.cadProd.Location = new System.Drawing.Point(353, 344);
             this.cadProd.Name = "cadProd";
             this.cadProd.Size = new System.Drawing.Size(186, 24);
-            this.cadProd.TabIndex = 77;
+            this.cadProd.TabIndex = 8;
             this.cadProd.Text = "Salvar";
             this.cadProd.UseVisualStyleBackColor = true;
             this.cadProd.Click += new System.EventHandler(this.cadProd_Click);
@@ -295,7 +286,7 @@ namespace california.e.UI
             this.codProdTxt.Location = new System.Drawing.Point(48, 130);
             this.codProdTxt.Name = "codProdTxt";
             this.codProdTxt.Size = new System.Drawing.Size(151, 20);
-            this.codProdTxt.TabIndex = 86;
+            this.codProdTxt.TabIndex = 1;
             // 
             // telaEstoque
             // 
@@ -304,7 +295,6 @@ namespace california.e.UI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.codprodlbl);
             this.Controls.Add(this.codProdTxt);
-            this.Controls.Add(this.altProdBtn);
             this.Controls.Add(this.pqsProdBtn);
             this.Controls.Add(this.pqsProdTxt);
             this.Controls.Add(this.label3);
@@ -354,7 +344,6 @@ namespace california.e.UI
         private System.Windows.Forms.TextBox corProdTxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button altProdBtn;
         private System.Windows.Forms.Button pqsProdBtn;
         private System.Windows.Forms.TextBox pqsProdTxt;
         private System.Windows.Forms.Label label3;

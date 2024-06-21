@@ -131,6 +131,11 @@ namespace california.e.UI
             produtos produtos = new produtos();
             dgvProd.DataSource = produtos.procuraProd(pqsProdTxt.Text);
         }
+
+        private void corProdTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

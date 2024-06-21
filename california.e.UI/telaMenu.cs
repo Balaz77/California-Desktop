@@ -30,8 +30,7 @@ namespace california.e.UI
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            telaVendas telaVendas = new telaVendas();
-            telaVendas.Show();
+            
         }
 
         private void btnHistorico_Click(object sender, EventArgs e)
@@ -42,15 +41,39 @@ namespace california.e.UI
 
         private void btnCadfun_Click(object sender, EventArgs e)
         {
-            telaFuncionario telaFuncionario = new telaFuncionario();
-            telaFuncionario.Show();
+           
         }
 
         private void btnCadcli_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            telaEstoque telaEstoque = new telaEstoque();
+            telaEstoque.Show();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            telaVendas telaVendas = new telaVendas();
+            telaVendas.Show();
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            telaFuncionario telaFuncionario = new telaFuncionario();
+            telaFuncionario.Show();
+        }
+
+        private void caToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
             telaCliente telaCliente = new telaCliente();
             telaCliente.Show();
         }
+
+       
     }
 }

@@ -30,8 +30,6 @@ namespace california.e.UI
         private void InitializeComponent()
         {
             this.cadFun = new System.Windows.Forms.Button();
-            this.confFuncLbl = new System.Windows.Forms.Label();
-            this.confFuncTxt = new System.Windows.Forms.TextBox();
             this.dtNacFuncLbl = new System.Windows.Forms.Label();
             this.usrFuncLbl = new System.Windows.Forms.Label();
             this.pwdFuncLbl = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@ namespace california.e.UI
             this.label2 = new System.Windows.Forms.Label();
             this.pqsFuncTxt = new System.Windows.Forms.TextBox();
             this.pqsFuncBtn = new System.Windows.Forms.Button();
-            this.altFuncBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,31 +65,15 @@ namespace california.e.UI
             this.cadFun.Location = new System.Drawing.Point(352, 330);
             this.cadFun.Name = "cadFun";
             this.cadFun.Size = new System.Drawing.Size(186, 24);
-            this.cadFun.TabIndex = 44;
+            this.cadFun.TabIndex = 9;
             this.cadFun.Text = "Salvar";
             this.cadFun.UseVisualStyleBackColor = true;
             this.cadFun.Click += new System.EventHandler(this.CadFun_Click);
             // 
-            // confFuncLbl
-            // 
-            this.confFuncLbl.AutoSize = true;
-            this.confFuncLbl.Location = new System.Drawing.Point(35, 156);
-            this.confFuncLbl.Name = "confFuncLbl";
-            this.confFuncLbl.Size = new System.Drawing.Size(83, 13);
-            this.confFuncLbl.TabIndex = 43;
-            this.confFuncLbl.Text = "Confirmar senha";
-            // 
-            // confFuncTxt
-            // 
-            this.confFuncTxt.Location = new System.Drawing.Point(38, 172);
-            this.confFuncTxt.Name = "confFuncTxt";
-            this.confFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.confFuncTxt.TabIndex = 42;
-            // 
             // dtNacFuncLbl
             // 
             this.dtNacFuncLbl.AutoSize = true;
-            this.dtNacFuncLbl.Location = new System.Drawing.Point(35, 275);
+            this.dtNacFuncLbl.Location = new System.Drawing.Point(43, 251);
             this.dtNacFuncLbl.Name = "dtNacFuncLbl";
             this.dtNacFuncLbl.Size = new System.Drawing.Size(102, 13);
             this.dtNacFuncLbl.TabIndex = 41;
@@ -101,7 +82,7 @@ namespace california.e.UI
             // usrFuncLbl
             // 
             this.usrFuncLbl.AutoSize = true;
-            this.usrFuncLbl.Location = new System.Drawing.Point(35, 69);
+            this.usrFuncLbl.Location = new System.Drawing.Point(43, 87);
             this.usrFuncLbl.Name = "usrFuncLbl";
             this.usrFuncLbl.Size = new System.Drawing.Size(43, 13);
             this.usrFuncLbl.TabIndex = 40;
@@ -110,7 +91,7 @@ namespace california.e.UI
             // pwdFuncLbl
             // 
             this.pwdFuncLbl.AutoSize = true;
-            this.pwdFuncLbl.Location = new System.Drawing.Point(35, 113);
+            this.pwdFuncLbl.Location = new System.Drawing.Point(43, 131);
             this.pwdFuncLbl.Name = "pwdFuncLbl";
             this.pwdFuncLbl.Size = new System.Drawing.Size(38, 13);
             this.pwdFuncLbl.TabIndex = 39;
@@ -119,7 +100,7 @@ namespace california.e.UI
             // endFuncLbl
             // 
             this.endFuncLbl.AutoSize = true;
-            this.endFuncLbl.Location = new System.Drawing.Point(35, 358);
+            this.endFuncLbl.Location = new System.Drawing.Point(43, 334);
             this.endFuncLbl.Name = "endFuncLbl";
             this.endFuncLbl.Size = new System.Drawing.Size(53, 13);
             this.endFuncLbl.TabIndex = 38;
@@ -128,7 +109,7 @@ namespace california.e.UI
             // telFuncLbl
             // 
             this.telFuncLbl.AutoSize = true;
-            this.telFuncLbl.Location = new System.Drawing.Point(35, 314);
+            this.telFuncLbl.Location = new System.Drawing.Point(43, 290);
             this.telFuncLbl.Name = "telFuncLbl";
             this.telFuncLbl.Size = new System.Drawing.Size(49, 13);
             this.telFuncLbl.TabIndex = 37;
@@ -137,7 +118,7 @@ namespace california.e.UI
             // cpfFuncLbl
             // 
             this.cpfFuncLbl.AutoSize = true;
-            this.cpfFuncLbl.Location = new System.Drawing.Point(38, 234);
+            this.cpfFuncLbl.Location = new System.Drawing.Point(46, 210);
             this.cpfFuncLbl.Name = "cpfFuncLbl";
             this.cpfFuncLbl.Size = new System.Drawing.Size(27, 13);
             this.cpfFuncLbl.TabIndex = 36;
@@ -146,7 +127,7 @@ namespace california.e.UI
             // nomeFuncLbl
             // 
             this.nomeFuncLbl.AutoSize = true;
-            this.nomeFuncLbl.Location = new System.Drawing.Point(35, 194);
+            this.nomeFuncLbl.Location = new System.Drawing.Point(43, 170);
             this.nomeFuncLbl.Name = "nomeFuncLbl";
             this.nomeFuncLbl.Size = new System.Drawing.Size(35, 13);
             this.nomeFuncLbl.TabIndex = 35;
@@ -154,52 +135,52 @@ namespace california.e.UI
             // 
             // pwdFuncTxt
             // 
-            this.pwdFuncTxt.Location = new System.Drawing.Point(38, 129);
+            this.pwdFuncTxt.Location = new System.Drawing.Point(46, 147);
             this.pwdFuncTxt.Name = "pwdFuncTxt";
             this.pwdFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.pwdFuncTxt.TabIndex = 34;
+            this.pwdFuncTxt.TabIndex = 3;
             // 
             // usrFuncTxt
             // 
-            this.usrFuncTxt.Location = new System.Drawing.Point(38, 85);
+            this.usrFuncTxt.Location = new System.Drawing.Point(46, 103);
             this.usrFuncTxt.Name = "usrFuncTxt";
             this.usrFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.usrFuncTxt.TabIndex = 33;
+            this.usrFuncTxt.TabIndex = 2;
             // 
             // nomeFuncTxt
             // 
-            this.nomeFuncTxt.Location = new System.Drawing.Point(38, 210);
+            this.nomeFuncTxt.Location = new System.Drawing.Point(46, 186);
             this.nomeFuncTxt.Name = "nomeFuncTxt";
             this.nomeFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.nomeFuncTxt.TabIndex = 32;
+            this.nomeFuncTxt.TabIndex = 4;
             // 
             // endFuncTxt
             // 
-            this.endFuncTxt.Location = new System.Drawing.Point(38, 374);
+            this.endFuncTxt.Location = new System.Drawing.Point(46, 350);
             this.endFuncTxt.Name = "endFuncTxt";
             this.endFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.endFuncTxt.TabIndex = 31;
+            this.endFuncTxt.TabIndex = 8;
             // 
             // telFuncTxt
             // 
-            this.telFuncTxt.Location = new System.Drawing.Point(38, 330);
+            this.telFuncTxt.Location = new System.Drawing.Point(46, 306);
             this.telFuncTxt.Name = "telFuncTxt";
             this.telFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.telFuncTxt.TabIndex = 30;
+            this.telFuncTxt.TabIndex = 7;
             // 
             // cpfFuncTxt
             // 
-            this.cpfFuncTxt.Location = new System.Drawing.Point(38, 250);
+            this.cpfFuncTxt.Location = new System.Drawing.Point(46, 226);
             this.cpfFuncTxt.Name = "cpfFuncTxt";
             this.cpfFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.cpfFuncTxt.TabIndex = 29;
+            this.cpfFuncTxt.TabIndex = 5;
             // 
             // dtNacFuncTxt
             // 
-            this.dtNacFuncTxt.Location = new System.Drawing.Point(38, 291);
+            this.dtNacFuncTxt.Location = new System.Drawing.Point(46, 267);
             this.dtNacFuncTxt.Name = "dtNacFuncTxt";
             this.dtNacFuncTxt.Size = new System.Drawing.Size(132, 20);
-            this.dtNacFuncTxt.TabIndex = 28;
+            this.dtNacFuncTxt.TabIndex = 6;
             // 
             // lblSubtFunc
             // 
@@ -235,7 +216,7 @@ namespace california.e.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 27);
+            this.label1.Location = new System.Drawing.Point(43, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 66;
@@ -243,15 +224,15 @@ namespace california.e.UI
             // 
             // cargoFuncTxt
             // 
-            this.cargoFuncTxt.Location = new System.Drawing.Point(38, 43);
+            this.cargoFuncTxt.Location = new System.Drawing.Point(46, 61);
             this.cargoFuncTxt.Name = "cargoFuncTxt";
             this.cargoFuncTxt.Size = new System.Drawing.Size(203, 20);
-            this.cargoFuncTxt.TabIndex = 65;
+            this.cargoFuncTxt.TabIndex = 1;
             // 
             // dateTimeLbl
             // 
             this.dateTimeLbl.AutoSize = true;
-            this.dateTimeLbl.Location = new System.Drawing.Point(176, 298);
+            this.dateTimeLbl.Location = new System.Drawing.Point(184, 274);
             this.dateTimeLbl.Name = "dateTimeLbl";
             this.dateTimeLbl.Size = new System.Drawing.Size(0, 13);
             this.dateTimeLbl.TabIndex = 67;
@@ -262,7 +243,8 @@ namespace california.e.UI
             this.dgvFunc.Location = new System.Drawing.Point(352, 107);
             this.dgvFunc.Name = "dgvFunc";
             this.dgvFunc.Size = new System.Drawing.Size(404, 214);
-            this.dgvFunc.TabIndex = 68;
+            this.dgvFunc.TabIndex = 12;
+            this.dgvFunc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunc_CellContentClick);
             // 
             // infoFunclbl
             // 
@@ -276,10 +258,10 @@ namespace california.e.UI
             // 
             // canBtnFunc
             // 
-            this.canBtnFunc.Location = new System.Drawing.Point(352, 360);
+            this.canBtnFunc.Location = new System.Drawing.Point(353, 360);
             this.canBtnFunc.Name = "canBtnFunc";
             this.canBtnFunc.Size = new System.Drawing.Size(106, 24);
-            this.canBtnFunc.TabIndex = 70;
+            this.canBtnFunc.TabIndex = 10;
             this.canBtnFunc.Text = "Cancelar";
             this.canBtnFunc.UseVisualStyleBackColor = true;
             this.canBtnFunc.Click += new System.EventHandler(this.canBtnFunc_Click);
@@ -289,7 +271,7 @@ namespace california.e.UI
             this.delBtnProd.Location = new System.Drawing.Point(665, 330);
             this.delBtnProd.Name = "delBtnProd";
             this.delBtnProd.Size = new System.Drawing.Size(91, 24);
-            this.delBtnProd.TabIndex = 71;
+            this.delBtnProd.TabIndex = 11;
             this.delBtnProd.Text = "Deletar";
             this.delBtnProd.UseVisualStyleBackColor = true;
             this.delBtnProd.Click += new System.EventHandler(this.delBtnFunc_Click);
@@ -309,34 +291,23 @@ namespace california.e.UI
             this.pqsFuncTxt.Location = new System.Drawing.Point(407, 84);
             this.pqsFuncTxt.Name = "pqsFuncTxt";
             this.pqsFuncTxt.Size = new System.Drawing.Size(237, 20);
-            this.pqsFuncTxt.TabIndex = 73;
+            this.pqsFuncTxt.TabIndex = 13;
             // 
             // pqsFuncBtn
             // 
             this.pqsFuncBtn.Location = new System.Drawing.Point(650, 83);
             this.pqsFuncBtn.Name = "pqsFuncBtn";
             this.pqsFuncBtn.Size = new System.Drawing.Size(106, 24);
-            this.pqsFuncBtn.TabIndex = 74;
+            this.pqsFuncBtn.TabIndex = 14;
             this.pqsFuncBtn.Text = "pesquisar";
             this.pqsFuncBtn.UseVisualStyleBackColor = true;
             this.pqsFuncBtn.Click += new System.EventHandler(this.pqsFuncBtn_Click);
-            // 
-            // altFuncBtn
-            // 
-            this.altFuncBtn.Location = new System.Drawing.Point(568, 330);
-            this.altFuncBtn.Name = "altFuncBtn";
-            this.altFuncBtn.Size = new System.Drawing.Size(91, 24);
-            this.altFuncBtn.TabIndex = 75;
-            this.altFuncBtn.Text = "Alterar";
-            this.altFuncBtn.UseVisualStyleBackColor = true;
-            this.altFuncBtn.Click += new System.EventHandler(this.altFuncBtn_Click);
             // 
             // telaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.altFuncBtn);
             this.Controls.Add(this.pqsFuncBtn);
             this.Controls.Add(this.pqsFuncTxt);
             this.Controls.Add(this.label2);
@@ -349,8 +320,6 @@ namespace california.e.UI
             this.Controls.Add(this.cargoFuncTxt);
             this.Controls.Add(this.lnkVoltarFun);
             this.Controls.Add(this.cadFun);
-            this.Controls.Add(this.confFuncLbl);
-            this.Controls.Add(this.confFuncTxt);
             this.Controls.Add(this.dtNacFuncLbl);
             this.Controls.Add(this.usrFuncLbl);
             this.Controls.Add(this.pwdFuncLbl);
@@ -379,8 +348,6 @@ namespace california.e.UI
         #endregion
 
         private System.Windows.Forms.Button cadFun;
-        private System.Windows.Forms.Label confFuncLbl;
-        private System.Windows.Forms.TextBox confFuncTxt;
         private System.Windows.Forms.Label dtNacFuncLbl;
         private System.Windows.Forms.Label usrFuncLbl;
         private System.Windows.Forms.Label pwdFuncLbl;
@@ -408,6 +375,5 @@ namespace california.e.UI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox pqsFuncTxt;
         private System.Windows.Forms.Button pqsFuncBtn;
-        private System.Windows.Forms.Button altFuncBtn;
     }
 }

@@ -84,28 +84,28 @@ namespace california.e.UI
             this.nomeCliTxt.Location = new System.Drawing.Point(266, 141);
             this.nomeCliTxt.Name = "nomeCliTxt";
             this.nomeCliTxt.Size = new System.Drawing.Size(232, 20);
-            this.nomeCliTxt.TabIndex = 48;
+            this.nomeCliTxt.TabIndex = 1;
             // 
             // endCliTxt
             // 
             this.endCliTxt.Location = new System.Drawing.Point(266, 277);
             this.endCliTxt.Name = "endCliTxt";
             this.endCliTxt.Size = new System.Drawing.Size(232, 20);
-            this.endCliTxt.TabIndex = 47;
+            this.endCliTxt.TabIndex = 4;
             // 
             // telefoneCliTxt
             // 
             this.telefoneCliTxt.Location = new System.Drawing.Point(266, 233);
             this.telefoneCliTxt.Name = "telefoneCliTxt";
             this.telefoneCliTxt.Size = new System.Drawing.Size(232, 20);
-            this.telefoneCliTxt.TabIndex = 46;
+            this.telefoneCliTxt.TabIndex = 3;
             // 
             // cpfCliTxt
             // 
             this.cpfCliTxt.Location = new System.Drawing.Point(266, 180);
             this.cpfCliTxt.Name = "cpfCliTxt";
             this.cpfCliTxt.Size = new System.Drawing.Size(232, 20);
-            this.cpfCliTxt.TabIndex = 45;
+            this.cpfCliTxt.TabIndex = 2;
             // 
             // lblSubt
             // 
@@ -132,7 +132,7 @@ namespace california.e.UI
             this.cadCliBtn.Location = new System.Drawing.Point(224, 347);
             this.cadCliBtn.Name = "cadCliBtn";
             this.cadCliBtn.Size = new System.Drawing.Size(313, 42);
-            this.cadCliBtn.TabIndex = 62;
+            this.cadCliBtn.TabIndex = 5;
             this.cadCliBtn.Text = "Cadastrar";
             this.cadCliBtn.UseVisualStyleBackColor = true;
             this.cadCliBtn.Click += new System.EventHandler(this.CadCli_Click);

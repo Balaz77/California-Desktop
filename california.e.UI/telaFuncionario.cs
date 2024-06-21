@@ -28,6 +28,7 @@ namespace california.e.UI
 
         private void CadFun_Click(object sender, EventArgs e)
         {
+            funcionario classFuncionario =new funcionario();
           
                 //recebe os dados dos campos do formulario
                 classFuncionario.cargoFunc = cargoFuncTxt.Text;
@@ -50,41 +51,40 @@ namespace california.e.UI
                 classFuncionario.enderecoFunc = endFuncTxt.Text;
 
             funcionarios.Add(classFuncionario);
-         
-          
-     
-            
+
+
+            if (cpfFuncTxt.Enabled == true)
+            {
                 //cadastra o funcionario se o cpf for true (existir)
                 classFuncionario.cadastrarFunc(classFuncionario);
                 MessageBox.Show("Funcionario inserido com sucesso");
 
-                //limpa os campos
-                cargoFuncTxt.Text = "";
-                usrFuncTxt.Text = "";
-                pwdFuncTxt.Text = "";
-                nomeFuncTxt.Text = "";
-                cpfFuncTxt.Text = "";
-                telFuncTxt.Text = "";
-                endFuncTxt.Text = "";
-                dtNacFuncTxt.Text = "";
-            
-        
-      
-          
-                //altera o funcionario se o cpf for false (n existir)
-             //   classFuncionario.alterarFunc(classFuncionario);
-              //  MessageBox.Show("Dados alterados com sucesso");
-            
+                
+            }
+            else 
+            {
+
+                classFuncionario.alterarFunc(classFuncionario);
+                MessageBox.Show("Dados alterados com sucesso");
+            }
+
+            //limpa os campos
+            cargoFuncTxt.Text = "";
+            usrFuncTxt.Text = "";
+            pwdFuncTxt.Text = "";
+            nomeFuncTxt.Text = "";
+            cpfFuncTxt.Text = "";
+            telFuncTxt.Text = "";
+            endFuncTxt.Text = "";
+            dtNacFuncTxt.Text = "";
+
 
             dgvFunc.DataSource = classFuncionario.buscarFunc();
            
 
-          //  cpfFuncTxt.Enabled = true;
+            cpfFuncTxt.Enabled = true;
             infoFunclbl.Text = "Inserir";
-            delBtnProd.Visible = true;
-
-
-
+            delBtnProd.Visible = false;
 
         }
 
@@ -182,43 +182,19 @@ namespace california.e.UI
                 dgvFunc.DataSource = classFuncionario.buscarFunc();
             }
 
-
-        
         }
 
         //pqs=´pesquisa
         //serve para filtrar o que deseja ver
         private void pqsFuncBtn_Click(object sender, EventArgs e)
         {
-           funcionario classFuncionario = new funcionario(); 
+            funcionario classFuncionario = new funcionario();
             dgvFunc.DataSource = classFuncionario.procuraFunc(pqsFuncTxt.Text);
         }
 
-        private void altFuncBtn_Click(object sender, EventArgs e)
+        private void dgvFunc_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            funcionario classfuncionario = new funcionario();
 
-               classFuncionario.cargoFunc = cargoFuncTxt.Text;
-               classFuncionario.usuarioFunc = usrFuncTxt.Text;
-               classFuncionario.senhaFunc = pwdFuncTxt.Text;
-               classFuncionario.nomeFunc = nomeFuncTxt.Text;
-               classFuncionario.cpfFunc = cpfFuncTxt.Text;
-               classFuncionario.telefoneFunc = telFuncTxt.Text;
-               classFuncionario.enderecoFunc = endFuncTxt.Text;
-               classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
-
-               cargoFuncTxt.Text = "";
-               usrFuncTxt.Text = "";
-               pwdFuncTxt.Text = "";
-               nomeFuncTxt.Text = "";
-               cpfFuncTxt.Text = "";
-               telFuncTxt.Text = "";
-               endFuncTxt.Text = "";
-               dtNacFuncTxt.Text = "";
-
-            classFuncionario.alterarFunc(classFuncionario);
         }
-
-        
     }
 }

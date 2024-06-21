@@ -16,7 +16,7 @@ namespace california.e.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new telaVendas());
+            Application.Run(new telaMenu());
         }
     }
 }

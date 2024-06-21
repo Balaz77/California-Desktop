@@ -64,7 +64,7 @@ namespace california.e.UI
             this.logEnterBtn.Location = new System.Drawing.Point(340, 334);
             this.logEnterBtn.Name = "logEnterBtn";
             this.logEnterBtn.Size = new System.Drawing.Size(121, 37);
-            this.logEnterBtn.TabIndex = 13;
+            this.logEnterBtn.TabIndex = 3;
             this.logEnterBtn.Text = "Entrar";
             this.logEnterBtn.UseVisualStyleBackColor = true;
             this.logEnterBtn.Click += new System.EventHandler(this.EnterUser_Click);
@@ -104,14 +104,14 @@ namespace california.e.UI
             this.logPwdTxt.Location = new System.Drawing.Point(308, 256);
             this.logPwdTxt.Name = "logPwdTxt";
             this.logPwdTxt.Size = new System.Drawing.Size(193, 20);
-            this.logPwdTxt.TabIndex = 9;
+            this.logPwdTxt.TabIndex = 2;
             // 
             // logUserTxt
             // 
             this.logUserTxt.Location = new System.Drawing.Point(308, 180);
             this.logUserTxt.Name = "logUserTxt";
             this.logUserTxt.Size = new System.Drawing.Size(193, 20);
-            this.logUserTxt.TabIndex = 8;
+            this.logUserTxt.TabIndex = 1;
             // 
             // telaLogin
             // 
