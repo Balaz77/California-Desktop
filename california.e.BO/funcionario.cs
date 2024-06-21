@@ -25,14 +25,14 @@ namespace california.e.BO
         public string enderecoFunc { get; set; }
         #endregion
 
-        public string confSenha{ get; }
+       
 
         #region cadastrar
         //este serve para cadastrar o funcionario dentro do banco
         public void cadastrarFunc(funcionario funcionario)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456"; //etec
             
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -53,7 +53,7 @@ namespace california.e.BO
         //configura o dgv
         public DataTable buscarFunc()
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -80,14 +80,14 @@ namespace california.e.BO
         //metodo para alterar
         public void alterarFunc(funcionario funcionario)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
 
             //este comando serve para alterar os funcionarios dentro do banco
-            string sqlcommand = "update funcionario set cargoFunc='" + funcionario.cargoFunc + "',usuarioFunc='" + funcionario.usuarioFunc + "',senhaFunc='" + funcionario.senhaFunc + "',nomeFunc='" + funcionario.nomeFunc + "',cpfFunc='" + funcionario.cpfFunc + "',dtNascimento='" + funcionario.dtNascimento.ToString("yyyy-MM-dd") + "',telefoneFunc='" + funcionario.telefoneFunc + "',enderecoFunc='" + funcionario.enderecoFunc + "';";
+            string sqlcommand = "update funcionario set cargoFunc='" + funcionario.cargoFunc + "',usuarioFunc='" + funcionario.usuarioFunc + "',senhaFunc='" + funcionario.senhaFunc + "',nomeFunc='" + funcionario.nomeFunc + "',cpfFunc='" + funcionario.cpfFunc + "',dtNascimento='" + funcionario.dtNascimento.ToString("yyyy-MM-dd") + "',telefoneFunc='" + funcionario.telefoneFunc + "',enderecoFunc='" + funcionario.enderecoFunc + "' where cpfFunc ='"+funcionario.cpfFunc+"' ;";
             MySqlCommand comando = new MySqlCommand(sqlcommand, minhaConexao);
 
             //executa o comando (query serve para executar)
@@ -99,7 +99,7 @@ namespace california.e.BO
         //string parametro deveria ser algo como (*classe*->funcionario *string*->funcionario)
         public void deletarFunc(string cpfFunc)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
@@ -115,7 +115,7 @@ namespace california.e.BO
         public DataTable procuraFunc(string cargoFunc)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -142,7 +142,7 @@ namespace california.e.BO
         #region validar 
         public bool validarFunc(string usuarioFunc, string senhaFunc )
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);

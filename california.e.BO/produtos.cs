@@ -25,7 +25,7 @@ namespace california.e.BO
         {
 
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -45,7 +45,7 @@ namespace california.e.BO
         //configura o dgv
         public DataTable buscarProd()
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -91,7 +91,7 @@ namespace california.e.BO
         //string parametro deveria ser algo como (*classe*->funcionario *string*->funcionario)
         public void deletarProd(int codProduto)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
@@ -107,7 +107,7 @@ namespace california.e.BO
         public DataTable procuraProd(string nomeProduto)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
