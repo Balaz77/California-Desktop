@@ -88,31 +88,47 @@ namespace california.e.UI
 
         private void canBtnProd_Click(object sender, EventArgs e)
         {
-            //apresenta uma escolha
-            DialogResult resp = MessageBox.Show("Deseja cancelar as atividades?", "Funcionarios", MessageBoxButtons.YesNo);
-
-            //se sim
-            if (resp == DialogResult.Yes)
+            
             {
-                MessageBox.Show("Você cancelou as atividades.");
+                infoFunclbl.Visible = true;
+                infoFunclbl.Text = "Inserir";
+                infoFuncLblred.Visible = false;
+                infoFunclbl.Visible = true;
+                codFuncLbl2.Visible = false;
+
+
                 codProdTxt.Text = "";
                 tamanhoProdTxt.Text = "";
                 corProdTxt.Text = "";
                 ctgProdTxt.Text = "";
                 NomeProdTxt.Text = "";
                 ValProdTxt.Text = "";
-               
+
+                codProdTxt.Visible = true;
+                tamanhoProdTxt.Visible = true;
+                corProdTxt.Visible = true;
+                ctgProdTxt.Visible = true;
+                NomeProdTxt.Visible = true;
+                ValProdTxt.Visible = true;
+
+                codprodlbl.Visible = true;
+                tamProdlbl.Visible = true; 
+                corProdlbl.Visible = true;
+                catProdlbl.Visible = true;
+                nomeProdlbl.Visible = true;
+                valProdlbl.Visible = true;
+
+                cadProd.Visible = true;
+                delBtnProd.Visible = false;
+
+
 
             }
         }
 
         private void delBtnProd_Click(object sender, EventArgs e)
         {
-            if (codProdTxt.Text == "")
-            {
-                MessageBox.Show("Por favor digite o código do produto no campo.");
-            }
-
+           
             //se a resposta for sim ele vai excluir o funcionario da tabela
             DialogResult result = MessageBox.Show("A exclusão do produto será realizada, tem certeza disso?", "produtos", MessageBoxButtons.YesNo);
 
@@ -135,6 +151,42 @@ namespace california.e.UI
         private void corProdTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            infoFunclbl.Visible = false;
+            infoFunclbl.Text = "Deletar";
+            infoFuncLblred.Visible = true;
+            infoFunclbl.Visible = false;
+            codFuncLbl2.Visible = true;
+
+
+            codProdTxt.Text = "";
+            tamanhoProdTxt.Text = "";
+            corProdTxt.Text = "";
+            ctgProdTxt.Text = "";
+            NomeProdTxt.Text = "";
+            ValProdTxt.Text = "";
+
+            codProdTxt.Visible = true;
+            tamanhoProdTxt.Visible = false;
+            corProdTxt.Visible = false;
+            ctgProdTxt.Visible = false;
+            QuantProdTxt.Visible = false;
+            NomeProdTxt.Visible = false;
+            ValProdTxt.Visible = false;
+
+            codprodlbl.Visible = true;
+            tamProdlbl.Visible = false;
+            corProdlbl.Visible = false;
+            catProdlbl.Visible = false;
+            qntProdlbl.Visible = false;
+            nomeProdlbl.Visible = false;
+            valProdlbl.Visible = false;
+
+            cadProd.Visible = false;
+            delBtnProd.Visible = true;
         }
     }
     

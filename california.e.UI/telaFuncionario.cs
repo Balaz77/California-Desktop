@@ -28,27 +28,27 @@ namespace california.e.UI
 
         private void CadFun_Click(object sender, EventArgs e)
         {
-            funcionario classFuncionario =new funcionario();
-          
-                //recebe os dados dos campos do formulario
-                classFuncionario.cargoFunc = cargoFuncTxt.Text;
-                classFuncionario.usuarioFunc = usrFuncTxt.Text;
-                classFuncionario.senhaFunc = pwdFuncTxt.Text;
-                classFuncionario.nomeFunc = nomeFuncTxt.Text; 
-                classFuncionario.cpfFunc = cpfFuncTxt.Text;
+            funcionario classFuncionario = new funcionario();
+
+            //recebe os dados dos campos do formulario
+            classFuncionario.cargoFunc = cargoFuncTxt.Text;
+            classFuncionario.usuarioFunc = usrFuncTxt.Text;
+            classFuncionario.senhaFunc = pwdFuncTxt.Text;
+            classFuncionario.nomeFunc = nomeFuncTxt.Text;
+            classFuncionario.cpfFunc = cpfFuncTxt.Text;
             try
             {
                 //validar dados da data de nascimento 
-               classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
+                classFuncionario.dtNascimento = DateTime.Parse(dtNacFuncTxt.Text);
             }
             catch
             {
                 //messagebox apresenta o conteudo caso a date esta errada.
                 MessageBox.Show("Insira os dados corretamente!");
             }
-                
-                classFuncionario.telefoneFunc = telFuncTxt.Text;
-                classFuncionario.enderecoFunc = endFuncTxt.Text;
+
+            classFuncionario.telefoneFunc = telFuncTxt.Text;
+            classFuncionario.enderecoFunc = endFuncTxt.Text;
 
             funcionarios.Add(classFuncionario);
 
@@ -59,9 +59,9 @@ namespace california.e.UI
                 classFuncionario.cadastrarFunc(classFuncionario);
                 MessageBox.Show("Funcionario inserido com sucesso");
 
-                
+
             }
-            else 
+            else
             {
 
                 classFuncionario.alterarFunc(classFuncionario);
@@ -80,11 +80,7 @@ namespace california.e.UI
 
 
             dgvFunc.DataSource = classFuncionario.buscarFunc();
-           
-
-            cpfFuncTxt.Enabled = true;
-            infoFunclbl.Text = "Inserir";
-            delBtnProd.Visible = false;
+            delBtnFunc.Visible = false;
 
         }
 
@@ -94,12 +90,14 @@ namespace california.e.UI
             telaMenu telaMenu = new telaMenu();
             telaMenu.Show();
         }
-      
+
 
         private void telaFuncionario_Load(object sender, EventArgs e)
         {
             funcionario classFuncionario = new funcionario();
             dgvFunc.DataSource = classFuncionario.buscarFunc();
+            delBtnFunc.Visible = false;
+            cadFun.Visible = false;
 
         }
 
@@ -119,25 +117,20 @@ namespace california.e.UI
             //mostra os botoes que estavam escondidos e habilita troca
             infoFunclbl.Text = "Alterar";
             cpfFuncTxt.Enabled = false;
-            delBtnProd.Visible = true;
 
-          //  classFuncionario.alterarFunc(classFuncionario);
+
+            //  classFuncionario.alterarFunc(classFuncionario);
 
         }
 
         //botao para cancelar as atividades como alterar ou excluir
         private void canBtnFunc_Click(object sender, EventArgs e)
         {
-            //apresenta uma escolha
-            DialogResult resp = MessageBox.Show("Deseja cancelar as atividades?", "Funcionarios", MessageBoxButtons.YesNo);
+                infoFunclbl.Text = "Inserir";
+                infoFunclblred.Visible = false;
+                infoFunclbl.Visible = true;
+                cpfFuncLbl2.Visible = false;
 
-            //se sim
-            if (resp == DialogResult.Yes)
-            {
-                MessageBox.Show("Você cancelou as atividades.");
-
-                infoFunclbl.Text = "inserir";
-                
                 cargoFuncTxt.Text = "";
                 usrFuncTxt.Text = "";
                 pwdFuncTxt.Text = "";
@@ -146,42 +139,48 @@ namespace california.e.UI
                 telFuncTxt.Text = "";
                 endFuncTxt.Text = "";
                 dtNacFuncTxt.Text = "";
-                cpfFuncTxt.Enabled=true;
 
-                //botão invisivel
-              
+                cargoFuncTxt.Visible = true;
+                usrFuncTxt.Visible = true;
+                pwdFuncTxt.Visible = true;
+                nomeFuncTxt.Visible = true;
+                cpfFuncTxt.Visible = true;
+                telFuncTxt.Visible = true;
+                endFuncTxt.Visible = true;
+                dtNacFuncTxt.Visible = true;
 
+                cargoFuncLbl.Visible = true;
+                usrFuncLbl.Visible = true;
+                pwdFuncLbl.Visible = true;
+                nomeFuncLbl.Visible = true;
+                cpfFuncLbl.Visible = true;
+                dtNacFuncLbl.Visible = true;
+                telFuncLbl.Visible = true;
+                endFuncLbl.Visible = true;
 
-            }
-
+                cadFun.Visible = true;
+                delBtnFunc.Visible = false;
         }
 
         //botão para deletar
         private void delBtnFunc_Click(object sender, EventArgs e)
         {
-
-            if (cpfFuncTxt.Text == "")
-            {
-                MessageBox.Show("Por favor digite o CPF no campo.");
-
-            }
-
             //se a resposta for sim ele vai excluir o funcionario da tabela
             DialogResult result = MessageBox.Show("A exclusão do funcionario será realizada, tem certeza disso?", "Funcionarios", MessageBoxButtons.YesNo);
-           
-            if (result == DialogResult.Yes) {
+
+            if (result == DialogResult.Yes)
+            {
 
                 //instanciando
                 funcionario classFuncionario = new funcionario();
                 //chamando o metodo para excluir 
                 //digitar cpf para poder excluir
                 classFuncionario.deletarFunc(cpfFuncTxt.Text);
-                
+
                 MessageBox.Show("Funcionario foi excluido");
 
                 dgvFunc.DataSource = classFuncionario.buscarFunc();
             }
-
         }
 
         //pqs=´pesquisa
@@ -193,6 +192,56 @@ namespace california.e.UI
         }
 
         private void dgvFunc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+            cargoFuncTxt.Enabled = false;
+            usrFuncTxt.Enabled = false;
+            pwdFuncTxt.Enabled = false;
+            nomeFuncTxt.Enabled = false;
+            cpfFuncTxt.Enabled = true;
+            telFuncTxt.Enabled = false;
+            endFuncTxt.Enabled = false;
+            dtNacFuncTxt.Enabled = false;
+
+            cadFun.Visible = false;
+            delBtnFunc.Visible = true;
+            cpfFuncTxt.Text = "";
+            infoFunclbl.Text = "Deletar";
+            */
+            cargoFuncTxt.Visible = false;
+            usrFuncTxt.Visible = false;
+            pwdFuncTxt.Visible = false;
+            nomeFuncTxt.Visible = false;
+            cpfFuncTxt.Visible = true;
+            telFuncTxt.Visible = false;
+            endFuncTxt.Visible = false;
+            dtNacFuncTxt.Visible = false;
+
+            cargoFuncLbl.Visible = false;
+            usrFuncLbl.Visible = false;
+            pwdFuncLbl.Visible = false;
+            nomeFuncLbl.Visible = false;
+            cpfFuncLbl.Visible = true;
+            dtNacFuncLbl.Visible = false;
+            telFuncLbl.Visible = false;
+            endFuncLbl.Visible = false;
+
+            cpfFuncLbl2.Visible = true;
+            cadFun.Visible = false;
+            delBtnFunc.Visible = true;
+            infoFunclbl.Visible = false;
+            infoFunclblred.Visible = true;
+
+            cpfFuncTxt.Text = "";
+            infoFunclblred.Text = "Deletar";
+        }
+
+        private void usrFuncLbl_Click(object sender, EventArgs e)
         {
 
         }

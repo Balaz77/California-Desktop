@@ -102,6 +102,7 @@ namespace california.e.UI
             // logPwdTxt
             // 
             this.logPwdTxt.Location = new System.Drawing.Point(308, 256);
+            this.logPwdTxt.MaxLength = 20;
             this.logPwdTxt.Name = "logPwdTxt";
             this.logPwdTxt.Size = new System.Drawing.Size(193, 20);
             this.logPwdTxt.TabIndex = 2;
@@ -109,6 +110,7 @@ namespace california.e.UI
             // logUserTxt
             // 
             this.logUserTxt.Location = new System.Drawing.Point(308, 180);
+            this.logUserTxt.MaxLength = 30;
             this.logUserTxt.Name = "logUserTxt";
             this.logUserTxt.Size = new System.Drawing.Size(193, 20);
             this.logUserTxt.TabIndex = 1;

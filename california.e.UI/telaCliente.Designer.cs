@@ -82,6 +82,7 @@ namespace california.e.UI
             // nomeCliTxt
             // 
             this.nomeCliTxt.Location = new System.Drawing.Point(266, 141);
+            this.nomeCliTxt.MaxLength = 30;
             this.nomeCliTxt.Name = "nomeCliTxt";
             this.nomeCliTxt.Size = new System.Drawing.Size(232, 20);
             this.nomeCliTxt.TabIndex = 1;
@@ -89,6 +90,7 @@ namespace california.e.UI
             // endCliTxt
             // 
             this.endCliTxt.Location = new System.Drawing.Point(266, 277);
+            this.endCliTxt.MaxLength = 40;
             this.endCliTxt.Name = "endCliTxt";
             this.endCliTxt.Size = new System.Drawing.Size(232, 20);
             this.endCliTxt.TabIndex = 4;
@@ -96,6 +98,7 @@ namespace california.e.UI
             // telefoneCliTxt
             // 
             this.telefoneCliTxt.Location = new System.Drawing.Point(266, 233);
+            this.telefoneCliTxt.MaxLength = 14;
             this.telefoneCliTxt.Name = "telefoneCliTxt";
             this.telefoneCliTxt.Size = new System.Drawing.Size(232, 20);
             this.telefoneCliTxt.TabIndex = 3;
@@ -103,6 +106,7 @@ namespace california.e.UI
             // cpfCliTxt
             // 
             this.cpfCliTxt.Location = new System.Drawing.Point(266, 180);
+            this.cpfCliTxt.MaxLength = 11;
             this.cpfCliTxt.Name = "cpfCliTxt";
             this.cpfCliTxt.Size = new System.Drawing.Size(232, 20);
             this.cpfCliTxt.TabIndex = 2;

@@ -47,24 +47,27 @@ namespace california.e.UI
             this.lblSubtFunc = new System.Windows.Forms.Label();
             this.lblTtlFunc = new System.Windows.Forms.Label();
             this.lnkVoltarFun = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cargoFuncLbl = new System.Windows.Forms.Label();
             this.cargoFuncTxt = new System.Windows.Forms.TextBox();
             this.dateTimeLbl = new System.Windows.Forms.Label();
             this.dgvFunc = new System.Windows.Forms.DataGridView();
             this.infoFunclbl = new System.Windows.Forms.Label();
-            this.canBtnFunc = new System.Windows.Forms.Button();
-            this.delBtnProd = new System.Windows.Forms.Button();
+            this.cadBtnFunc = new System.Windows.Forms.Button();
+            this.delBtnFunc = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pqsFuncTxt = new System.Windows.Forms.TextBox();
             this.pqsFuncBtn = new System.Windows.Forms.Button();
+            this.ExcBtnFunc = new System.Windows.Forms.Button();
+            this.cpfFuncLbl2 = new System.Windows.Forms.Label();
+            this.infoFunclblred = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // cadFun
             // 
-            this.cadFun.Location = new System.Drawing.Point(352, 330);
+            this.cadFun.Location = new System.Drawing.Point(352, 357);
             this.cadFun.Name = "cadFun";
-            this.cadFun.Size = new System.Drawing.Size(186, 24);
+            this.cadFun.Size = new System.Drawing.Size(152, 24);
             this.cadFun.TabIndex = 9;
             this.cadFun.Text = "Salvar";
             this.cadFun.UseVisualStyleBackColor = true;
@@ -87,6 +90,7 @@ namespace california.e.UI
             this.usrFuncLbl.Size = new System.Drawing.Size(43, 13);
             this.usrFuncLbl.TabIndex = 40;
             this.usrFuncLbl.Text = "Usuario";
+            this.usrFuncLbl.Click += new System.EventHandler(this.usrFuncLbl_Click);
             // 
             // pwdFuncLbl
             // 
@@ -136,13 +140,16 @@ namespace california.e.UI
             // pwdFuncTxt
             // 
             this.pwdFuncTxt.Location = new System.Drawing.Point(46, 147);
+            this.pwdFuncTxt.MaxLength = 20;
             this.pwdFuncTxt.Name = "pwdFuncTxt";
+            this.pwdFuncTxt.PasswordChar = '*';
             this.pwdFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.pwdFuncTxt.TabIndex = 3;
             // 
             // usrFuncTxt
             // 
             this.usrFuncTxt.Location = new System.Drawing.Point(46, 103);
+            this.usrFuncTxt.MaxLength = 30;
             this.usrFuncTxt.Name = "usrFuncTxt";
             this.usrFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.usrFuncTxt.TabIndex = 2;
@@ -150,6 +157,7 @@ namespace california.e.UI
             // nomeFuncTxt
             // 
             this.nomeFuncTxt.Location = new System.Drawing.Point(46, 186);
+            this.nomeFuncTxt.MaxLength = 300;
             this.nomeFuncTxt.Name = "nomeFuncTxt";
             this.nomeFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.nomeFuncTxt.TabIndex = 4;
@@ -157,6 +165,7 @@ namespace california.e.UI
             // endFuncTxt
             // 
             this.endFuncTxt.Location = new System.Drawing.Point(46, 350);
+            this.endFuncTxt.MaxLength = 40;
             this.endFuncTxt.Name = "endFuncTxt";
             this.endFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.endFuncTxt.TabIndex = 8;
@@ -164,6 +173,7 @@ namespace california.e.UI
             // telFuncTxt
             // 
             this.telFuncTxt.Location = new System.Drawing.Point(46, 306);
+            this.telFuncTxt.MaxLength = 14;
             this.telFuncTxt.Name = "telFuncTxt";
             this.telFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.telFuncTxt.TabIndex = 7;
@@ -171,6 +181,7 @@ namespace california.e.UI
             // cpfFuncTxt
             // 
             this.cpfFuncTxt.Location = new System.Drawing.Point(46, 226);
+            this.cpfFuncTxt.MaxLength = 11;
             this.cpfFuncTxt.Name = "cpfFuncTxt";
             this.cpfFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.cpfFuncTxt.TabIndex = 5;
@@ -178,6 +189,7 @@ namespace california.e.UI
             // dtNacFuncTxt
             // 
             this.dtNacFuncTxt.Location = new System.Drawing.Point(46, 267);
+            this.dtNacFuncTxt.MaxLength = 12;
             this.dtNacFuncTxt.Name = "dtNacFuncTxt";
             this.dtNacFuncTxt.Size = new System.Drawing.Size(132, 20);
             this.dtNacFuncTxt.TabIndex = 6;
@@ -213,18 +225,19 @@ namespace california.e.UI
             this.lnkVoltarFun.Text = "Voltar ao menu";
             this.lnkVoltarFun.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkVoltarFun_LinkClicked);
             // 
-            // label1
+            // cargoFuncLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Cargo";
+            this.cargoFuncLbl.AutoSize = true;
+            this.cargoFuncLbl.Location = new System.Drawing.Point(43, 45);
+            this.cargoFuncLbl.Name = "cargoFuncLbl";
+            this.cargoFuncLbl.Size = new System.Drawing.Size(35, 13);
+            this.cargoFuncLbl.TabIndex = 66;
+            this.cargoFuncLbl.Text = "Cargo";
             // 
             // cargoFuncTxt
             // 
             this.cargoFuncTxt.Location = new System.Drawing.Point(46, 61);
+            this.cargoFuncTxt.MaxLength = 30;
             this.cargoFuncTxt.Name = "cargoFuncTxt";
             this.cargoFuncTxt.Size = new System.Drawing.Size(203, 20);
             this.cargoFuncTxt.TabIndex = 1;
@@ -256,25 +269,25 @@ namespace california.e.UI
             this.infoFunclbl.Size = new System.Drawing.Size(0, 18);
             this.infoFunclbl.TabIndex = 69;
             // 
-            // canBtnFunc
+            // cadBtnFunc
             // 
-            this.canBtnFunc.Location = new System.Drawing.Point(353, 360);
-            this.canBtnFunc.Name = "canBtnFunc";
-            this.canBtnFunc.Size = new System.Drawing.Size(106, 24);
-            this.canBtnFunc.TabIndex = 10;
-            this.canBtnFunc.Text = "Cancelar";
-            this.canBtnFunc.UseVisualStyleBackColor = true;
-            this.canBtnFunc.Click += new System.EventHandler(this.canBtnFunc_Click);
+            this.cadBtnFunc.Location = new System.Drawing.Point(352, 327);
+            this.cadBtnFunc.Name = "cadBtnFunc";
+            this.cadBtnFunc.Size = new System.Drawing.Size(206, 24);
+            this.cadBtnFunc.TabIndex = 10;
+            this.cadBtnFunc.Text = "Modo de cadastro";
+            this.cadBtnFunc.UseVisualStyleBackColor = true;
+            this.cadBtnFunc.Click += new System.EventHandler(this.canBtnFunc_Click);
             // 
-            // delBtnProd
+            // delBtnFunc
             // 
-            this.delBtnProd.Location = new System.Drawing.Point(665, 330);
-            this.delBtnProd.Name = "delBtnProd";
-            this.delBtnProd.Size = new System.Drawing.Size(91, 24);
-            this.delBtnProd.TabIndex = 11;
-            this.delBtnProd.Text = "Deletar";
-            this.delBtnProd.UseVisualStyleBackColor = true;
-            this.delBtnProd.Click += new System.EventHandler(this.delBtnFunc_Click);
+            this.delBtnFunc.Location = new System.Drawing.Point(650, 357);
+            this.delBtnFunc.Name = "delBtnFunc";
+            this.delBtnFunc.Size = new System.Drawing.Size(106, 24);
+            this.delBtnFunc.TabIndex = 11;
+            this.delBtnFunc.Text = "Deletar";
+            this.delBtnFunc.UseVisualStyleBackColor = true;
+            this.delBtnFunc.Click += new System.EventHandler(this.delBtnFunc_Click);
             // 
             // label2
             // 
@@ -289,6 +302,7 @@ namespace california.e.UI
             // pqsFuncTxt
             // 
             this.pqsFuncTxt.Location = new System.Drawing.Point(407, 84);
+            this.pqsFuncTxt.MaxLength = 30;
             this.pqsFuncTxt.Name = "pqsFuncTxt";
             this.pqsFuncTxt.Size = new System.Drawing.Size(237, 20);
             this.pqsFuncTxt.TabIndex = 13;
@@ -303,20 +317,55 @@ namespace california.e.UI
             this.pqsFuncBtn.UseVisualStyleBackColor = true;
             this.pqsFuncBtn.Click += new System.EventHandler(this.pqsFuncBtn_Click);
             // 
+            // ExcBtnFunc
+            // 
+            this.ExcBtnFunc.Location = new System.Drawing.Point(564, 327);
+            this.ExcBtnFunc.Name = "ExcBtnFunc";
+            this.ExcBtnFunc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ExcBtnFunc.Size = new System.Drawing.Size(192, 24);
+            this.ExcBtnFunc.TabIndex = 73;
+            this.ExcBtnFunc.Text = "Modo de deleção";
+            this.ExcBtnFunc.UseVisualStyleBackColor = true;
+            this.ExcBtnFunc.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cpfFuncLbl2
+            // 
+            this.cpfFuncLbl2.AutoSize = true;
+            this.cpfFuncLbl2.ForeColor = System.Drawing.Color.DarkRed;
+            this.cpfFuncLbl2.Location = new System.Drawing.Point(46, 251);
+            this.cpfFuncLbl2.Name = "cpfFuncLbl2";
+            this.cpfFuncLbl2.Size = new System.Drawing.Size(252, 13);
+            this.cpfFuncLbl2.TabIndex = 74;
+            this.cpfFuncLbl2.Text = "Por favor, insira o CPF do funcionário a ser deletado";
+            this.cpfFuncLbl2.Visible = false;
+            // 
+            // infoFunclblred
+            // 
+            this.infoFunclblred.AutoSize = true;
+            this.infoFunclblred.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoFunclblred.ForeColor = System.Drawing.Color.DarkRed;
+            this.infoFunclblred.Location = new System.Drawing.Point(597, 52);
+            this.infoFunclblred.Name = "infoFunclblred";
+            this.infoFunclblred.Size = new System.Drawing.Size(0, 18);
+            this.infoFunclblred.TabIndex = 75;
+            // 
             // telaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.infoFunclblred);
+            this.Controls.Add(this.cpfFuncLbl2);
+            this.Controls.Add(this.ExcBtnFunc);
             this.Controls.Add(this.pqsFuncBtn);
             this.Controls.Add(this.pqsFuncTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.delBtnProd);
-            this.Controls.Add(this.canBtnFunc);
+            this.Controls.Add(this.delBtnFunc);
+            this.Controls.Add(this.cadBtnFunc);
             this.Controls.Add(this.infoFunclbl);
             this.Controls.Add(this.dgvFunc);
             this.Controls.Add(this.dateTimeLbl);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cargoFuncLbl);
             this.Controls.Add(this.cargoFuncTxt);
             this.Controls.Add(this.lnkVoltarFun);
             this.Controls.Add(this.cadFun);
@@ -365,15 +414,18 @@ namespace california.e.UI
         private System.Windows.Forms.Label lblSubtFunc;
         private System.Windows.Forms.Label lblTtlFunc;
         private System.Windows.Forms.LinkLabel lnkVoltarFun;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label cargoFuncLbl;
         private System.Windows.Forms.TextBox cargoFuncTxt;
         private System.Windows.Forms.Label dateTimeLbl;
         private System.Windows.Forms.DataGridView dgvFunc;
         private System.Windows.Forms.Label infoFunclbl;
-        private System.Windows.Forms.Button canBtnFunc;
-        private System.Windows.Forms.Button delBtnProd;
+        private System.Windows.Forms.Button cadBtnFunc;
+        private System.Windows.Forms.Button delBtnFunc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox pqsFuncTxt;
         private System.Windows.Forms.Button pqsFuncBtn;
+        private System.Windows.Forms.Button ExcBtnFunc;
+        private System.Windows.Forms.Label cpfFuncLbl2;
+        private System.Windows.Forms.Label infoFunclblred;
     }
 }

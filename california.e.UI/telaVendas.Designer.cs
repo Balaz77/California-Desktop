@@ -87,22 +87,23 @@ namespace california.e.UI
             this.saleVendaLbl.AutoSize = true;
             this.saleVendaLbl.Location = new System.Drawing.Point(57, 245);
             this.saleVendaLbl.Name = "saleVendaLbl";
-            this.saleVendaLbl.Size = new System.Drawing.Size(134, 13);
+            this.saleVendaLbl.Size = new System.Drawing.Size(135, 13);
             this.saleVendaLbl.TabIndex = 35;
-            this.saleVendaLbl.Text = "inserir desconto na compra";
+            this.saleVendaLbl.Text = "Inserir desconto na compra";
             // 
             // qntVendaLbl
             // 
             this.qntVendaLbl.AutoSize = true;
             this.qntVendaLbl.Location = new System.Drawing.Point(57, 199);
             this.qntVendaLbl.Name = "qntVendaLbl";
-            this.qntVendaLbl.Size = new System.Drawing.Size(60, 13);
+            this.qntVendaLbl.Size = new System.Drawing.Size(62, 13);
             this.qntVendaLbl.TabIndex = 34;
-            this.qntVendaLbl.Text = "quantidade";
+            this.qntVendaLbl.Text = "Quantidade";
             // 
             // nomeProdTxt
             // 
             this.nomeProdTxt.Location = new System.Drawing.Point(60, 309);
+            this.nomeProdTxt.MaxLength = 30;
             this.nomeProdTxt.Name = "nomeProdTxt";
             this.nomeProdTxt.Size = new System.Drawing.Size(130, 20);
             this.nomeProdTxt.TabIndex = 5;
@@ -110,6 +111,7 @@ namespace california.e.UI
             // dtVendaTxt
             // 
             this.dtVendaTxt.Location = new System.Drawing.Point(60, 356);
+            this.dtVendaTxt.MaxLength = 12;
             this.dtVendaTxt.Name = "dtVendaTxt";
             this.dtVendaTxt.Size = new System.Drawing.Size(91, 20);
             this.dtVendaTxt.TabIndex = 6;
@@ -117,6 +119,7 @@ namespace california.e.UI
             // saleVendaTxt
             // 
             this.saleVendaTxt.Location = new System.Drawing.Point(60, 261);
+            this.saleVendaTxt.MaxLength = 4;
             this.saleVendaTxt.Name = "saleVendaTxt";
             this.saleVendaTxt.Size = new System.Drawing.Size(131, 20);
             this.saleVendaTxt.TabIndex = 4;
@@ -124,6 +127,7 @@ namespace california.e.UI
             // qntVendaTxt
             // 
             this.qntVendaTxt.Location = new System.Drawing.Point(60, 213);
+            this.qntVendaTxt.MaxLength = 7;
             this.qntVendaTxt.Name = "qntVendaTxt";
             this.qntVendaTxt.Size = new System.Drawing.Size(81, 20);
             this.qntVendaTxt.TabIndex = 3;
@@ -131,6 +135,7 @@ namespace california.e.UI
             // valVendaTxt
             // 
             this.valVendaTxt.Location = new System.Drawing.Point(60, 167);
+            this.valVendaTxt.MaxLength = 30;
             this.valVendaTxt.Name = "valVendaTxt";
             this.valVendaTxt.Size = new System.Drawing.Size(81, 20);
             this.valVendaTxt.TabIndex = 2;
@@ -177,7 +182,7 @@ namespace california.e.UI
             // 
             // pqsProdBtn
             // 
-            this.pqsProdBtn.Location = new System.Drawing.Point(549, 77);
+            this.pqsProdBtn.Location = new System.Drawing.Point(574, 77);
             this.pqsProdBtn.Name = "pqsProdBtn";
             this.pqsProdBtn.Size = new System.Drawing.Size(106, 24);
             this.pqsProdBtn.TabIndex = 10;
@@ -187,7 +192,8 @@ namespace california.e.UI
             // 
             // pqsProdTxt
             // 
-            this.pqsProdTxt.Location = new System.Drawing.Point(427, 80);
+            this.pqsProdTxt.Location = new System.Drawing.Point(452, 80);
+            this.pqsProdTxt.MaxLength = 30;
             this.pqsProdTxt.Name = "pqsProdTxt";
             this.pqsProdTxt.Size = new System.Drawing.Size(116, 20);
             this.pqsProdTxt.TabIndex = 9;
@@ -198,9 +204,9 @@ namespace california.e.UI
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(308, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 20);
+            this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 82;
-            this.label1.Text = "Data da venda";
+            this.label1.Text = "Código da compra";
             // 
             // canBtnProd
             // 
@@ -234,6 +240,7 @@ namespace california.e.UI
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(60, 118);
+            this.textBox1.MaxLength = 5;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(81, 20);
             this.textBox1.TabIndex = 1;

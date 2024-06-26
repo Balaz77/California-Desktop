@@ -60,13 +60,13 @@ namespace california.e.UI
             this.produtosToolStripMenuItem});
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.estoqueToolStripMenuItem.Text = "estoque";
+            this.estoqueToolStripMenuItem.Text = "Estoque";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.produtosToolStripMenuItem.Text = "produtos";
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // cadastrarToolStripMenuItem
@@ -81,15 +81,15 @@ namespace california.e.UI
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.funcionarioToolStripMenuItem.Text = "funcionario";
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // caToolStripMenuItem
             // 
             this.caToolStripMenuItem.Name = "caToolStripMenuItem";
-            this.caToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.caToolStripMenuItem.Text = "cliente";
+            this.caToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.caToolStripMenuItem.Text = "Cliente";
             this.caToolStripMenuItem.Click += new System.EventHandler(this.caToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
@@ -98,13 +98,13 @@ namespace california.e.UI
             this.registrarToolStripMenuItem});
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
             this.vendasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.vendasToolStripMenuItem.Text = "vendas";
+            this.vendasToolStripMenuItem.Text = "Vendas";
             // 
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.registrarToolStripMenuItem.Text = "registrar";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarToolStripMenuItem.Text = "Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
             // label1
