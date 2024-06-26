@@ -32,7 +32,7 @@ namespace california.e.BO
         public void cadastrarFunc(funcionario funcionario)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456"; //etec
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec"; //etec
             
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -53,7 +53,7 @@ namespace california.e.BO
         //configura o dgv
         public DataTable buscarFunc()
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -80,7 +80,7 @@ namespace california.e.BO
         //metodo para alterar
         public void alterarFunc(funcionario funcionario)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -99,7 +99,7 @@ namespace california.e.BO
         //string parametro deveria ser algo como (*classe*->funcionario *string*->funcionario)
         public void deletarFunc(string cpfFunc)
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
             minhaConexao.Open();
@@ -115,7 +115,7 @@ namespace california.e.BO
         public DataTable procuraFunc(string cargoFunc)
         {
             //conectando com o banco
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
@@ -142,7 +142,7 @@ namespace california.e.BO
         #region validar 
         public bool validarFunc(string usuarioFunc, string senhaFunc )
         {
-            string conexaoBD = "server=localhost; database=california; uid=root; pwd=123456";
+            string conexaoBD = "server=localhost; database=california; uid=root; pwd=etec";
 
             //conexao
             MySqlConnection minhaConexao = new MySqlConnection(conexaoBD);
